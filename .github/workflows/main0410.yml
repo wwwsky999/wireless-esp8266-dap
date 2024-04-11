@@ -28,6 +28,7 @@ jobs:
       run: |
         # Download specific version of esptool for each target
         # This avoids the use of sudo and hard-coded versions
+        pip install --upgrade setuptools && python -m pip install --upgrade pip
         curl -LJO https://github.com/espressif/esptool/releases/download/v4.6.2/esptool-v4.6.2-$(uname -m).zip
         unzip esptool-v4.6.2-$(uname -m).zip
         mv esptool/esptool.py .
