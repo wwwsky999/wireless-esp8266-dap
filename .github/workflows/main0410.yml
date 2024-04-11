@@ -18,17 +18,13 @@ jobs:
     strategy:
       matrix:
         target-hardware: [esp8266, esp32, esp32c3]
-
-
-
-    
     
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-python@v5
       with:
         submodules: recursive
-        python-version: '3.10' 
+        python-version: '3.9' 
 
     - name: before_install
       if: matrix.target-hardware == 'esp8266'
