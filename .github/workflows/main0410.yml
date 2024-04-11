@@ -37,9 +37,9 @@ jobs:
     - name: install
       if: matrix.target-hardware == 'esp8266'
       run: |
-        pip3 install -e .  --no-build-isolation --no-index --find-links=./
+        pip install --upgrade setuptools
         tar -xzf ./xtensa-lx106-elf-linux64-1.22.0-100-ge567ec7-5.2.0.tar.gz
-        python3 -m pip3 install --user -r ./ESP8266_RTOS_SDK/requirements.txt
+        python -m pip install --user -r ./ESP8266_RTOS_SDK/requirements.txt
 
     - name: script
       id: script
