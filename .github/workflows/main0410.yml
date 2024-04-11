@@ -35,7 +35,9 @@ jobs:
         python get-pip.py
         python -m pip install --upgrade pip
         pip install --upgrade setuptools 
-
+        pip install pyinstaller
+        pip install wheel
+        
     - name: install
       if: matrix.target-hardware == 'esp8266'
       run: |
