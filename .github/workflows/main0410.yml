@@ -24,12 +24,12 @@ jobs:
     - uses: actions/setup-python@v5
       with:
         submodules: recursive
-        python-version: '3.9' 
+       # python-version: '3.9' 
 
     - name: before_install
       if: matrix.target-hardware == 'esp8266'
       run: |
-        python -m pip install --upgrade pip setuptools wheel
+        
         sudo apt update
         sudo apt install -y gcc git wget make libncurses-dev flex bison python  python-setuptools python3-serial ninja-build
         sudo apt-get install git wget libncurses-dev flex bison gperf python3 python3-pip python3-setuptools python3-serial python3-cryptography python3-future python3-pyparsing python3-pyelftools cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
