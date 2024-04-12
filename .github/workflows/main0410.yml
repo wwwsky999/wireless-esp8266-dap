@@ -42,8 +42,8 @@ jobs:
       run: |
      
         tar -xzf ./xtensa-lx106-elf-linux64-1.22.0-100-ge567ec7-5.2.0.tar.gz
-        #pip3 install -r ./ESP8266_RTOS_SDK/requirements.txt
-        python -m pip install --user -r ./ESP8266_RTOS_SDK/requirements.txt
+        pip3 install --user -r ./ESP8266_RTOS_SDK/requirements.txt
+        #python -m pip install --user -r ./ESP8266_RTOS_SDK/requirements.txt
 
     - name: script
       id: script
